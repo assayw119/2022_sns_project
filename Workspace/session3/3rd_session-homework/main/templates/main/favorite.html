@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="header">
+            <h1 class="Hi">PYW's Favorite</h1>
+            <h2>💁‍♂️</h2>
+        </div>
+    </div>
+
+    <main>
+        <h1 class="visually-hidden">Favorite</h1>
+    
+        <div class="container px-4" id="featured-3">
+            <h2 class="pb-2 border-bottom">Favorite</h2>
+            <div class="row g-4 py-5 row-cols-lg-3">
+                <div class="favorite">
+                    <div class="favorite_image">
+                        <h3 class="favorite_name">1. Activity</h3>
+                        <img src="{% static 'image/activity.JPG' %}">
+                    </div>
+                </div>
+                <div class="favorite">
+                    <div class="favorite_image">
+                        <h3 class="favorite_name">2. Band</h3>
+                        <img src="{% static 'image/guitar.JPG' %}">
+                    </div>
+                </div>
+                <div class="favorite">
+                    <div class="favorite_image">
+                        <h3 class="favorite_name">3. Exercise</h3>
+                        <img src="{% static 'image/exercise.jpeg' %}">
+                    </div>
+                </div>
+                <div class="favorite">
+                    <div class="favorite_image">
+                        <br><br>
+                        <h3 class="favorite_name">4. Trable</h3>
+                        <img src="{% static 'image/profile4.JPG' %}">
+                    </div>
+                </div>
+                <div class="favorite">
+                    <div class="favorite_image">
+                        <br><br>
+                        <h3 class="favorite_name">5. Competition</h3>
+                        <img src="{% static 'image/expo.jpeg' %}">
+                    </div>
+                </div>
+                <div class="favorite">
+                    <div class="favorite_image">
+                        <br><br>
+                        <h3 class="favorite_name">6. Volunteer</h3>
+                        <img src="{% static 'image/volunteer.JPG' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </main>
+        
+{% endblock %}
