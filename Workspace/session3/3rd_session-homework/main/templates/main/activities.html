@@ -31,6 +31,11 @@
                     2021.06 ~ 2021.12 &nbsp;&nbsp;&nbsp;&nbsp;동국대학교 시스템안전연구실 학부연구생<br><br>
                     2022.01 ~ 2022.02 &nbsp;&nbsp;&nbsp;&nbsp;이트너스(주) 기업부설연구소 Platform Leader팀 인턴<br><br>
                     2022.03 ~ 2022.12 &nbsp;&nbsp;&nbsp;&nbsp;멋쟁이 사자처럼 10기<br><br>
+                    
+                    {% for activity in activities %}
+                    {{activity.acti_date}} &nbsp;&nbsp;&nbsp;&nbsp;{{activity.acti_insert}}<br><br>
+                    {% endfor %}
+                    <a href="{%url 'new'%}">추가하기</a>
                 </p>
             </div>
 

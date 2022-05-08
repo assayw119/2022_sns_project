@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{post.acti_title}}</h1>
+활동 날짜 : {{post.acti_date}}<br>
+활동 내용 : {{post.acti_insert}}
+<hr>
+<a href="{%url 'showactivities'%}">돌아가기</a>
+{% endblock %}

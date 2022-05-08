@@ -31,4 +31,9 @@ urlpatterns = [
     # contact page URL 연결하기 with 별명사용
     path('contact/', views.showcontact, name="showcontact"),
 
+    path('<str:id>', views.detail, name='detail'),
+
+    path('new/', views.new, name='new'),
+    
+    path('create/', views.create, name='create'),
 ]
