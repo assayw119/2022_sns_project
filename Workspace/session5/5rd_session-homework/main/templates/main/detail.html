@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{post.acti_title}}</h1>
+활동 날짜 : {{post.acti_date}}<br>
+활동 내용 : {{post.acti_insert}}
+<hr>
+{%if post.acti_image %}
+    <p><img src="{{ post.acti_image.url }}" alt='사진'></p>
+{% endif %}
+<a href="{%url 'main:edit' post.id%}">수정하기</a>
+<a href="{%url 'main:delete' post.id%}">삭제하기</a>
+<a href="{%url 'main:showactivities'%}">돌아가기</a>
+{% endblock %}
