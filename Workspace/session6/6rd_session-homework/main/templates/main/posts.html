@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    <br>
+    <h1>활동 목록</h1>
+
+    <div>
+        {% for post in posts %}
+        <div>
+            <h3>{{post.acti_title}}</h3>
+            {{post.acti_date}}<br>
+            {{post.acti_insert}}<br>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% else %}
+    <a href="{% url 'account_login' %}" class="btn btn-warning">로그인</a>
+    <a href="{% url 'account_signup' %}" class="btn btn-warning">회원가입</a>
+    {% endif %}
+
+{% endblock %}
