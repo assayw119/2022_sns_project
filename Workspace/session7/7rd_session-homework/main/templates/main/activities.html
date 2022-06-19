@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="header">
+            <h1 class="Hi">PYW's Activities</h1>
+            <h2>💁‍♂️</h2>
+        </div>
+    </div>
+
+    <main>
+    
+        <div class="container px-4" id="featured-3">
+            <div class="b-example-divider"></div>
+        
+            <div class="contain px-4 py-5" id="hanging-icons">
+                <h2 class="pb-2 border-bottom">Activities</h2>
+                <p><br>
+                    2017.03 ~ 2018.06 &nbsp;&nbsp;&nbsp;&nbsp;동국대학교 산업시스템공학과 과대표<br><br>
+                    2017.03 ~ 2018.06 &nbsp;&nbsp;&nbsp;&nbsp;동국대학교 백상응원단 41기<br><br>
+                    2017.11 ~ 2022.12 &nbsp;&nbsp;&nbsp;&nbsp; 동국대학교 공과대학 다빈치 프로그램 5기<br><br>
+                    2018.03 ~ 2021.12 &nbsp;&nbsp;&nbsp;&nbsp;동국대학교 참사람봉사단 10기, 15-16기<br><br>
+                    2018.09 ~ 2020.04 &nbsp;&nbsp;&nbsp;&nbsp;육군 병장 만기전역<br><br>
+                    2020.08 ~ 2020.12 &nbsp;&nbsp;&nbsp;&nbsp;동국대학교 LINC+ 창의문제해결프로젝트<br><br>
+                    2021.01 ~ 2021.01 &nbsp;&nbsp;&nbsp;&nbsp;한국장학재단 대학생 재능봉사캠프<br><br>
+                    2021.01 ~ 2021.12 &nbsp;&nbsp;&nbsp;&nbsp;동국대학교 산업시스템공학과 제55대 학생회장<br><br>
+                    2021.04 ~ 2021.11 &nbsp;&nbsp;&nbsp;&nbsp;과학기술정보통신부 프로보노 ICT 공모전<br><br>
+                    2021.04 ~ 2021.11 &nbsp;&nbsp;&nbsp;&nbsp;한국중앙자원봉사센터 청년주도형 안녕캠페인 공모사업<br><br>
+                    2021.06 ~ 2021.12 &nbsp;&nbsp;&nbsp;&nbsp;동국대학교 시스템안전연구실 학부연구생<br><br>
+                    2022.01 ~ 2022.02 &nbsp;&nbsp;&nbsp;&nbsp;이트너스(주) 기업부설연구소 Platform Leader팀 인턴<br><br>
+                    2022.03 ~ 2022.12 &nbsp;&nbsp;&nbsp;&nbsp;멋쟁이 사자처럼 10기<br><br>
+                    
+                    {% for activity in activities %}
+                    {{activity.acti_date}} &nbsp;&nbsp;&nbsp;&nbsp;{{activity.acti_insert}}<br><br><img src="{{post.acti_image.url}}" alt="사진" height="10px"> <br><br>
+                    {% endfor %}
+                    <a href="{%url 'main:new'%}">추가하기</a>
+                </p>
+            </div>
+
+            <div class="b-example-divider"></div>
+        </div>
+    </main>
+        
+        
+        
+    
+{% endblock %}
